@@ -33,7 +33,8 @@ tensor = torch.FloatTensor([[0, 1, 2, 3, 4, 5],
 
 # 이런 문제로 인해 gather이 필요함
 
-gathered_tensor = torch.gather(tensor, 1, torch.LongTensor([[4, 4],[1, 2],[2, 0],[0, 5]])) # input, dim, index
+# gathered_tensor = torch.gather(tensor, 1, torch.LongTensor([[4, 4],[1, 2],[2, 0],[0, 5]])) # input, dim, index
+gathered_tensor = torch.gather(tensor, 1, torch.LongTensor([])) # input, dim, index
 print("gathered_tensor: ", gathered_tensor)
 print()
 
